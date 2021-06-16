@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  // add api url, when added a new variable and then need to add export in environment.prod.ts
+  apiURL: 'https://localhost:44372/movie/'
 };
 
 /*

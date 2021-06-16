@@ -1,0 +1,11 @@
+<!--
+    <img *ngIf="!list" 
+src = "https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e47jk333xme17sozgxevu8nrqj36j4yk3bs9ls20yid&rid=giphy.gif&ct=g" />
+<span *ngIf= "list?.length == 0"> There is no such elements</span>
+
+-->
+<span *ngIf= "!list"> There is no such elements</span>
+<ng-container *ngIf="list && list.length > 0">
+    <ng-content select="[content]"></ng-content>
+</ng-container>
+

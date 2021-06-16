@@ -1,0 +1,29 @@
+
+<app-generic-list [list] = "movies">
+    <ng-container content>
+        <div class = "movies-container">
+            <div *ngFor = "let movie of movies; let idx = index" class="movie-container">
+                <a><img [src] = "movie.poster" alt = "Poster" /></a>
+                <p>
+                    <a>{{movie.title}}</a>
+                </p>
+                <div>
+                    <a mat-flat-button color ="primary">Edit</a>
+                    <button mat-flat-button color="warn" type="button">Delete</button>
+                </div>
+            </div>
+        </div>
+    <!--
+        <img *ngIf="!movies"  
+src = "https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif?cid=ecf05e47jk333xme17sozgxevu8nrqj36j4yk3bs9ls20yid&rid=giphy.gif&ct=g" />
+<span *ngIf= "movies?.length == 0"> There is no such elements</span>
+
+        <div>Chapter {{movie.epsiods}}</div>
+                <div>{{movie.price | currency}}</div>
+                <div >
+                    <h2><mat-icon>open_in_new</mat-icon>{{idx}} {{movie.title | uppercase}}</h2> 
+                    <button (click) = "onRemove(idx)">Remove</button>
+                </div>
+    -->
+    </ng-container>
+</app-generic-list>

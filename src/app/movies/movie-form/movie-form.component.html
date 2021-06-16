@@ -1,0 +1,52 @@
+<div>
+    <form (submit)="saveChanges()" [formGroup]="form">
+        <mat-form-field appearance="outline">
+            <mat-label>Title of Movie</mat-label>
+            <input formControlName="title" matInput />
+            <mat-error>The title is required</mat-error>
+        </mat-form-field>
+
+        <div>
+            <mat-checkbox class="checkbox-container" formControlName="inTheaters">In Theaters</mat-checkbox>
+        </div>
+        <mat-form-field appearance="outline">
+            <mat-label>Trailer</mat-label>
+            <input formControlName="trailer" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Release Date</mat-label>
+            <input formControlName="releaseDate" matInput [matDatepicker]="picker" />
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+            <mat-error>The title is required</mat-error>
+        </mat-form-field>
+
+        <h2>Select the poster</h2>
+        <app-input-img [urlCurrentImage] = "model?.poster"
+            (onImageSelected) = "onImageSelected($event)"
+        ></app-input-img>
+        <h2>Summary</h2>
+        <app-input-markdown 
+            [label] = "'Summary'"
+            [markdownContent]="model?.summary"
+            (changeMarkdown)="changeMarkdown($event)"
+        ></app-input-markdown>
+        <h2>Select Moive Genres</h2>
+        <app-multiple-selector [nonSelectedItems]="nonSelectedGenres"
+        [selectedItems]="selectedGenres"
+        ></app-multiple-selector>
+
+        <h2>Select Moive Theaters</h2>
+        <app-multiple-selector [nonSelectedItems]="nonSelectedMovieTheaters"
+        [selectedItems]="selectedTheaters"
+        ></app-multiple-selector>
+
+        <h2>Select a Actor</h2>
+        <app-actors-autocomplete [selectedActors]="selectedActors"></app-actors-autocomplete>
+        <div>
+            <button mat-flat-button color="primary" [disabled] = "form.invalid">Save Changes</button>
+            <a mat-stroked-button routerLink="/">Cancel</a>
+        </div>
+    </form>
+</div>

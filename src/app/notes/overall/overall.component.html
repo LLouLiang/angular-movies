@@ -1,0 +1,89 @@
+<h1>Quick Notes</h1>
+<div class="float-container">
+  <div class="float-child">
+    <ul>
+      <li><h2>Modules, Component, Directives, Services, Pipes, Routing</h2></li>
+      <li><h2>Modules are the fundamental building blocks of ang app, they are class with the NgModule decorator</h2></li>
+      <li><h2>Component are like views, a set of screen element with which user interact, using decorator, @Component</h2></li>
+      <li><h2>Component- event bindings, property bindings</h2></li>
+      <li><h2>Directives transfer element of HTML templates</h2></li>
+      <li><h2>Structural directives are those that alter the HTML tags or the DOM of page</h2></li>
+      <li><h2>Attribute directives are those that change the appearance or behavior of existing elements in our template</h2></li>
+      <li><h2>Service is using to share data or logic that is not specifically associated with a component</h2></li>
+      <li><h2>Pipes allow us to transform data from one format to another</h2></li>
+      <li><h2>Routing is used to have navigation functionality in our angular application</h2></li>
+      <li>ngFor</li>
+      <li>ngIf</li>
+      <li>双大括号 is one way binding</li>
+      <li>对小括号 equvient to ngClike, method binding</li>
+      <li>OnInit interface, then implement ngOnInit</li>
+      <li>At Input 放置在component变量的上方，是通过angular core实现</li>
+      <li>ngContainer,并没有放在dom里</li>
+      <li>Template variables go check comment code</li>
+      <li>Content projection</li>
+      <li>Angular material - menu</li>
+      <li>dynamic class, ngClass</li>
+      <li>eventEmitter it is a generic type</li>
+        <li>On-in-it</li>
+        <li>OnChange</li>
+        <li>OnDestory</li>
+        <li>AfterViewInit - fire when the component has been rendered</li>
+        <li>AfterViewChecked(like OnCheck)</li>
+        <li>AfterContentInit</li>
+        <li>AfterContentChecked</li>
+        <li>Constructor is for service injection</li>
+        <li>Global Styling - style.css is controlling the global css, and each component controls itself</li>
+        <li>remove a component, go to app.module.ts to delete that component from declaration and import fields</li>
+        <li>Routing</li>
+        <li>In app.module.ts, AppRoutingModule has been instaniated using angular routing</li>
+      <li>JavaScript</li>
+      <li>Route Parameters</li>
+      <li>like in router setting path: 'actor/edit/:id'</li>
+      <li>WildCard to redirect unrecongized url</li>
+      <li>WildCard 1: path:'**', component:"homecomponent"</li>
+      <li>WildCard 2: path:'**', redirectTo:'' (root component)</li>
+      
+      <li>Form + Reactive Forms + Form validations + dropdown checkbox (controllers), date & markdown</li>
+      <li>Template driven and reactive forms</li>
+    </ul>
+  </div>
+  <div class="float-child-right">
+    <ul>
+      <li>Angular Form</li>
+      <li>Angular --import FormBuilder, FormGroup  from 'angular/forms</li>
+      <li>会使用到formbuilder: FormBuilder</li>
+      <li>还要使用到form: FormGroup 变量，以及把formbuilder关联到FormGroup上实现form的变量绑定</li>
+      <li>这样可以实现在formbulder的group方法下设置表单可以关联的变量</li>
+      <li><h2>Data Validations</h2></li>
+      <li>static min(min:number) : ValidatorFn</li>
+      <li>max(max:number)  : ValidatorFn</li>
+      <li>required(control: AbstractControl): ValidationErrors | null</li>
+      <li>requiredTrue(control:AbstractControl): ValidationErrors | null</li>
+      <li>email(control:AbstractControl): ValidationErrors | null</li>
+      <li>minLength(minLength:number) : ValidatorFn</li>
+      <li>maxLength(maxLength:number) : ValidatorFn</li>
+      <li>pattern(pattern:string | RegExp) : ValidatorFn</li>
+      <li>nullValidator(control:AbstractControl): ValidationErrors | null</li>
+      <li>compse(validators:ValidatorFn[]):ValidatorFn | null</li>
+      <li>compseAsync(validators:AsyncValidatorFn[]):AsyncValidatorFn | null</li>
+      <li><h1>Custom validator</h1></li>
+      <li>Create a blank typescript file + export function and extends ValidatorFn</li>
+      <li>in the body return a control : abstractControl</li>
+      <li>Share a Form within Create, edit</li>
+      <li>Select and checkbox input from material angular</li>
+      <li>Add a custom movie filter (Search function) as an independent component</li>
+      <li>Datepick toggle and datepick (mat-datepicker-toggle)</li>
+      <li><h2>实现怎样通过button来跳转实现打开文件夹的input操作</h2></li>
+      <li>button type="button" (click)="fileInput.click()">Select Image /button</li>
+      <li>input type="file" hidden #fileInput accept="image/png, image/jpeg, image/jpg" (change)="change($event)"</li>
+      <li>Select an image and display it on the form Check-> component input-img, form-actor</li>
+      <li><h2>Install new package - ngx markdown using NPM</h2></li>
+
+      <li><h2>Services</h2></li>
+      <li>A angular service is a <h2>class</h2> witgh a well defined purpose</li>
+      <li>Organized and reusable code</li>
+      <li>Encapsulate web API calls</li>
+    </ul>
+  </div>
+</div>
+  
